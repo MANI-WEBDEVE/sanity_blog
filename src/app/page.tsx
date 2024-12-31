@@ -11,6 +11,7 @@ export default async function Home() {
   Summery, title, "slug":slug.current, image
 }`;
 
+
 const data:POST[] = await client.fetch(query);
 
   return (
@@ -27,3 +28,4 @@ const data:POST[] = await client.fetch(query);
     </main>
   );
 }
+

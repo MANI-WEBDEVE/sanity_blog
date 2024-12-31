@@ -1,27 +1,26 @@
-import {defineArrayMember, defineType, defineField} from 'sanity';
 
-export const author = defineType({
+export const author = {
     name:"author",
     type:"document",
     title:"Author",
     fields:[
-        defineField({
-            name:"name",
+       
+         {   name:"name",
             type:"string",
-            title:"Name"
-        }),
-        defineField({
-            name:"image",
+            title:"Name",},
+       
+       
+          {  name:"image",
             type:"image",
             title:"Image",
             options:{
                 hotspot:true
-            }
-        }),
-        defineField({
-            name:"bio",
+            },
+        },
+     
+           { name:"bio",
             type:"text",
-            title:"Bio"
-        })
+            title:"Bio",
+        },
     ]
-})
+}

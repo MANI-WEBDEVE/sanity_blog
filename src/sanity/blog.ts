@@ -1,11 +1,9 @@
-import { defineField, defineType, defineArrayMember } from "sanity";
-
-export const blog = defineType({
+export const blog = {
   name: "blog",
   type: "document",
   title: "Blog",
   fields: [
-    defineField({
+    {
       name: "title",
       type: "string",
       title: "Post Title",
@@ -15,9 +13,9 @@ export const blog = defineType({
           .min(10)
           .max(100)
           .warning("Title should be between 10 and 100 characters"),
-    }),
+    },
 
-    defineField({
+    {
       name: "slug",
       type: "slug",
       title: "Slug",
@@ -26,9 +24,9 @@ export const blog = defineType({
         source: "title",
         maxLength: 50,
       },
-    }),
+    },
 
-    defineField({
+    {
       name: "Summery",
       type: "text",
       title: "Summery",
@@ -38,17 +36,17 @@ export const blog = defineType({
           .min(10)
           .max(100)
           .warning("Summery should be between 10 and 100 characters"),
-    }),
+    },
 
-    defineField({
+    {
       name: "image",
       type: "image",
       title: "Image",
       description: "Image of the blog post",
       validation: (Rule: any) => Rule.required().warning("Image is required"),
-    }),
+    },
 
-    defineField({
+    {
       name: "content",
       type: "array",
       title: "Content",
@@ -59,8 +57,8 @@ export const blog = defineType({
         // {type: 'actor'},
         { type: "image" },
       ],
-    }),
-    defineField({
+    },
+    {
       name: "author",
       type: "reference",
       title: "Author",
@@ -69,7 +67,7 @@ export const blog = defineType({
           type: "author",
         },
       ],
-    }),
+    },
     //  {
     //   name:"Gender",
     //   type:"string",
@@ -86,4 +84,4 @@ export const blog = defineType({
     //   }
     //  }
   ],
-});
+};

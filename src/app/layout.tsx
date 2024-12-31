@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/Navbar";
-import ThemeProvider from "../components/ThemeProvider";
 import Footer from "../components/Footer";
 import Container from "../components/Container";
 import { Toaster } from "react-hot-toast";
@@ -25,19 +24,13 @@ export default function RootLayout({
       <body
         className={` bg-light dark:bg-dark `}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem = {false}
-          disableTransitionOnChange
-        >
+         
           <Container>
           <Navbar />
           {children}
           <Toaster/>
           </Container>
           <Footer />
-        </ThemeProvider>
       </body>
     </html>
   );

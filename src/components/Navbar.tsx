@@ -1,6 +1,4 @@
 import Link from "next/link";
-import SocialMedia from "./SocialMedia";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   return (
@@ -13,7 +11,6 @@ export default function Navbar() {
       </nav>
       {/* <SocialMedia /> */}
       <div className="flex items-center justify-center gap-4">
-      <ThemeToggle />
       </div>
     </header>
   );

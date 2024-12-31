@@ -1,6 +1,4 @@
-import Link from "next/link";
 import React from "react";
-import { Youtube } from "./icons";
 
 export default function FooterLearn() {
   return (

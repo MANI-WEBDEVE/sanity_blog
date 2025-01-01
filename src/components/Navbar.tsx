@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SocialMedia from "./SocialMedia";
 
 export default function Navbar() {
   return (
@@ -9,8 +10,8 @@ export default function Navbar() {
         </Link>
         {/* <Link href={"/blogs"} className="bg-accentDarkSecondary px-4 py-1 rounded-lg text-dark ">Blogs</Link> */}
       </nav>
-      {/* <SocialMedia /> */}
       <div className="flex items-center justify-center gap-4">
+      <SocialMedia />
       </div>
     </header>
   );

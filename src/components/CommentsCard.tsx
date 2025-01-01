@@ -33,14 +33,14 @@ const CommentsCard = () => {
         <div className="">
           <div className="flex flex-col gap-4">
             <input
-              className="mb-4 pl-10 pr-4 py-2 w-1/2 rounded-md bg-neutral-600/20"
+              className="mb-4 pl-10 pr-4 py-2 w-full xs:w-3/4 sm:w-2/3 md:w-1/2 rounded-md bg-neutral-600/20"
               type="text"
-              placeholder="Enter your name"
+              placeholder="Enter your name" 
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
             <input
-              className="mb-4 pl-10 pr-4 py-2 w-1/2 rounded-md bg-neutral-600/20"
+              className="mb-4 pl-10 pr-4 py-2 w-full xs:w-3/4 sm:w-2/3 md:w-1/2 rounded-md bg-neutral-600/20"
               type="text"
               placeholder="Comment here"
               value={comment}
